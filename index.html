@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bacari 🥘</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/806/original/bg.jpg?1661665564");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      h1 {
+        font-size: 50px;
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #1c522c;
+        border-radius: 20px 40px;
+        padding: 10px 5px;
+        margin: 25px;
+      }
+      img {
+        width: 500px;
+        height: 300px;
+        border-radius: 35px 15px;
+      }
+      .w3Content {
+        margin: auto;
+      }
+      .summary {
+        line-height: 1.8;
+        font-size: 18px;
+        margin: 5px 10px;
+        text-align: center;
+      }
+      .popular {
+        font-size: 30px;
+        text-align: center;
+      }
+      .dishes {
+        text-align: center;
+        font-size: 19px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+      .names {
+        font-weight: 600;
+      }
+      .locations {
+        display: block;
+        margin-top: 0;
+        text-decoration: none;
+        color: #1c522c;
+        font-size: 16px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+        font-weight: 500;
+      }
+      .locations:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: auto;
+        background: linear-gradient(#dae79e, #829b13);
+        border: 0.5px solid;
+        border-radius: 5px 5px;
+        font-size: 14px;
+        padding: 8px;
+        box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.5);
+        transition: all 140ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.7;
+        color: #1c522c;
+        cursor: pointer;
+      }
+      .footer {
+        text-align: center;
+        font-size: 15px;
+        padding: 5px;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        border: #1c522c;
+        border-radius: 10px;
+        background: linear-gradient(170deg, #e2e0de 20%, #e2d1c3 80%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>L.A Eats ❤️ Featuring:</h1>
+      <h2>
+        Bacari W. 3rd <br />
+        Bacari Silverlake<br />
+        Bacari GDL
+      </h2>
+      <div class="w3Content" style="max-width: 500px">
+        <img
+          class="mySlides"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/804/original/bacari3.jpg?1661664408"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/802/original/bacari1.jpg?1661664384"
+          style="width: 100%"
+        />
+        <img
+          class="mySlides"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/044/803/original/bacari2.png?1661664398"
+          style="width: 100%"
+        />
+      </div>
+      <br />
+      <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {
+            myIndex = 1;
+          }
+          x[myIndex - 1].style.display = "block";
+          setTimeout(carousel, 2100);
+        }
+      </script>
+      <p class="summary">
+        Bacari Restaurants is a Venetian-inspired small plates restaurant
+        featuring Mediterranean-influenced dishes by Chef Lior Hillel. They are
+        a family-owned, growing group of restaurants in the Los Angeles area.
+        Offering a rotating curation of small-production wines, craft cocktails
+        and eclectic beers from around the world.
+      </p>
+      <hr />
+      <p class="popular">
+        <em>Popular dishes:</em>
+      </p>
+      <div class="dishes">
+        <p>
+          <span class="names">sea bass pan seared:</span> <br />charred shishito
+          pepper & corn, tarragon aioli, pomegranate molasses, grilled lemon
+          <br /><br />
+          <span class="names">bacari fries:</span><br />
+          chef's “bcn” sauce, fried egg
+          <br /><br />
+          <span class="names">glazed pork belly:</span><br />
+          umami mulling glaze, sesame seed, lemon, scallion, cilantro
+          <br /><br />
+        </p>
+      </div>
+      <a
+        href="https://www.eatwithbacari.com/"
+        target="_blank"
+        class="locations"
+      >
+        <br />
+        SEE ALL LOCATIONS
+      </a>
+      <br />
+      <button>Join Newsletter</button>
+      <br />
+      <br />
+      <p class="footer">This page was built by Tracy Jardine</p>
+    </div>
+    <script>
+      function join() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        alert("Thank you " + name + "! Exciting new eats coming soon 💕");
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", join);
+    </script>
+  </body>
+</html>
